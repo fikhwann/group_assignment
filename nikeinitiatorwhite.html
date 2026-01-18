@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nike Initiator | SneakZone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+<div class="logo">
+        <a href="index.html"><img src="logo/logo.jpg" alt="logo"></a>
+       </div>
+       <nav>
+        <a href="index.html">Home</a>
+        <a href="men.html">Men</a>
+        <a href="women.html"class="active">Women</a>
+        <a href="unisex.html">Unisex</a>
+        <a href="aboutus.html">About Us</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h1>Nike Initiator</h1>
+</section>
+
+<section class="product-detail">
+    <div class="detail-container">
+
+        <!-- Main Image -->
+        <div class="main-image">
+            <img id="current-img" src="Nike/initiator_white5.png" alt="Nike Initiator">
+        </div>
+
+        <!-- Thumbnail Images -->
+        <div class="thumbnail-container">
+            <h4>More Images</h4>
+            <div class="thumbnails">
+                <img src="Nike/initiator_white5.png" alt="Nike Initiator" class="thumb" onclick="changeImage(this)">
+                <img src="Nike/initiator_white1.png" alt="Nike Initiator" class="thumb" onclick="changeImage(this)">
+                <img src="Nike/initiator_white2.png" alt="Nike Initiator" class="thumb" onclick="changeImage(this)">
+                <img src="Nike/initiator_white3.png" alt="Nike Initiator" class="thumb" onclick="changeImage(this)">
+                <img src="Nike/initiator_white4.png" alt="Nike Initiator" class="thumb" onclick="changeImage(this)">
+            </div>
+
+            <h4>Other Colors</h4>
+            <div class="other-colors">
+                <a href="nikeinitiatorwhite.html">
+                    <img src="Nike/initiator_white5.png" alt="Nike Initiator">
+                </a>
+                <a href="nikeinitiatorpink.html">
+                    <img src="Nike/initiator_pink5.png" alt="Nike Initiator">
+                </a>
+            </div>
+        </div>
+
+        <!-- Product Info -->
+         <div class="detail-info">
+            <h2>Nike Initiator</h2>
+            <p>Price: RM <b>459</b></p>
+            <p>Description: Put in miles with the comfortable support of the Nike Initiator. It has a breathable upper with a soft, cushioned design that helps you hit your stride with confidence.</p>
+            <br>
+        
+                <div class="size-header">
+                    <h3>Select Size</h3>
+                    <a href="sizetable.html" class="size-guide">Size Guide</a>
+                </div>
+
+
+                <div class="size-selector">
+                    <button class="size-btn" onclick="selectSize(this)">6</button>
+                    <button class="size-btn" onclick="selectSize(this)">7</button>
+                    <button class="size-btn" onclick="selectSize(this)">8</button>
+                    <button class="size-btn" onclick="selectSize(this)">9</button>
+                    <button class="size-btn" onclick="selectSize(this)">10</button>
+                </div>
+
+                <button class="add-to-cart" onclick="proceedPayment()">Proceed to Payment</button>
+
+
+                <p id="selected-size" class="size-info"></p>
+
+            <a href="women.html" class="back-button">← Back to Women Shoes</a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    function changeImage(el){
+        document.getElementById('current-img').src = el.src;
+    }
+</script>
+
+<script>
+    let selectedSize = null;
+
+    function selectSize(button) {
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        button.classList.add('active');
+        selectedSize = button.innerText;
+
+        document.getElementById('selected-size').innerText =
+            "Selected Size: " + selectedSize;
+    }
+
+    function proceedPayment() {
+        if (!selectedSize) {
+            alert("Please select a size first.");
+            return;
+        }
+
+        // Redirect to proceed payment page
+        window.location.href = "proceedpayment.html";
+    }
+</script>
+
+
+</body>
+</html>
+</html>

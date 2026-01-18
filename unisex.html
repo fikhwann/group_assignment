@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unisex Shoes | SneakZone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html"><img src="logo/logo.jpg" alt="logo"></a>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="unisex.html" class="active">Unisex</a>
+        <a href="aboutus.html">About Us</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h1>Unisex Shoes</h1>
+</section>
+
+<section class="shop-container">
+
+    <aside class="filter">
+        <h3>Filter by Brand</h3>
+
+        <label>
+            <input type="checkbox" class="brand-filter" value="nike">
+            Nike
+        </label>
+
+        <label>
+            <input type="checkbox" class="brand-filter" value="adidas">
+            Adidas
+        </label>
+
+        <label>
+            <input type="checkbox" class="brand-filter" value="puma">
+            Puma
+        </label>
+
+        <button class="back-button" onclick="clearFilter()">Clear Filter</button>
+    </aside>
+
+    <div class="products">
+        <h2>All Unisex Shoes</h2>
+
+        <div class="product-grid">
+
+            <a href="nikeairforce1white.html" class="product-card" data-brand="nike">
+                <img src="Nike/airforce1_white5.png">
+                <h3>Nike Air Force 1 '07</h3>
+                <p>RM 489</p>
+            </a>
+
+            <a href="adidassuperstarblack.html" class="product-card" data-brand="adidas">
+                <img src="Adidas/superstar2_black1.png">
+                <h3>Adidas Superstar</h3>
+                <p>RM 499</p>
+            </a>
+
+            <a href="pumapalermowhite.html" class="product-card" data-brand="puma">
+                <img src="Puma/palermowhite2.png">
+                <h3>Puma Palermo</h3>
+                <p>RM 429</p>
+            </a>
+
+            <a href="nikedunk.html" class="product-card" data-brand="nike">
+                <img src="Nike/nikedunk1.png">
+                <h3>Nike Dunk</h3>
+                <p>RM 499</p>
+            </a>
+
+            <a href="adidascampus001.html" class="product-card" data-brand="adidas">
+                <img src="Adidas/adidascampus001.png">
+                <h3>Adidas Campus 00s</h3>
+                <p>RM 699</p>
+            </a>
+
+            <a href="nikep6000.html" class="product-card" data-brand="nike">
+                <img src="Nike/nikep60001.png">
+                <h3>Nike P-6000</h3>
+                <p>RM 599</p>
+            </a>
+
+            <a href="pumaspeedcatpremium.html" class="product-card" data-brand="puma">
+                <img src="Puma/speedcatpremium2.png">
+                <h3>Puma Speedcat Premium</h3>
+                <p>RM 499</p>
+            </a>
+
+            <a href="adidasstanblack.html" class="product-card" data-brand="adidas">
+                <img src="Adidas/adidasstanblack1.png">
+                <h3>Adidas Stan Smith</h3>
+                <p>RM 699</p>
+            </a>
+
+            <a href="nikev2krunpink.html" class="product-card" data-brand="nike">
+                <img src="Nike/v2krun_pink5.png">
+                <h3>Nike V2K Run</h3>
+                <p>RM 599</p>
+            </a>
+
+            <a href="pumamayzeblack.html" class="product-card" data-brand="puma">
+                <img src="Puma/mayze_black1.png">
+                <h3>Puma Mayze</h3>
+                <p>RM 529</p>
+            </a>
+
+            <a href="adidasozelia.html" class="product-card" data-brand="adidas">
+                <img src="Adidas/ozelia1.png">
+                <h3>Adidas Ozelia</h3>
+                <p>RM 549</p>
+            </a>
+
+            <a href="pumacarina.html" class="product-card" data-brand="puma">
+                <img src="Puma/carina1.png">
+                <h3>Puma Carina</h3>
+                <p>RM 459</p>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SneakZone</p>
+</footer>
+
+<script>
+const checkboxes = document.querySelectorAll('.brand-filter');
+const products = document.querySelectorAll('.product-card');
+
+checkboxes.forEach(box => {
+    box.addEventListener('change', filterProducts);
+});
+
+function filterProducts() {
+    const selectedBrands = Array.from(checkboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+
+    products.forEach(product => {
+        const brand = product.dataset.brand;
+        product.style.display =
+            selectedBrands.length === 0 || selectedBrands.includes(brand)
+            ? "block"
+            : "none";
+    });
+}
+
+function clearFilter() {
+    checkboxes.forEach(cb => cb.checked = false);
+    filterProducts();
+}
+</script>
+
+</body>
+</html>

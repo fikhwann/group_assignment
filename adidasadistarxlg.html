@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adidas Adi Star XLG | SneakZone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html"><img src="logo/logo.jpg" alt="logo"></a>
+    </div>
+    <nav>
+        <a href="index.html" >Home</a>
+        <a href="men.html"class="active">Men</a>
+        <a href="women.html">Women</a>
+        <a href="unisex.html">Unisex</a>
+        <a href="aboutus.html">About Us</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h1>Adidas Adi Star XLG</h1>
+</section>
+
+<section class="product-detail">
+    <div class="detail-container">
+
+        <!-- Main Image -->
+        <div class="main-image">
+            <img id="current-img" src="Adidas/adidasadistarxlg1.png" alt="adidasadistarxlg1">
+        </div>
+
+        <!-- Thumbnail Images -->
+        <div class="thumbnail-container">
+            <h4>More Images</h4>
+            <div class="thumbnails">
+                <img src="Adidas/adidasadistarxlg1.png" alt="adidasadistarxlg1" class="thumb" onclick="changeImage(this)">
+                <img src="Adidas/adidasadistarxlg2.png" alt="adidasadistarxlg2" class="thumb" onclick="changeImage(this)">
+                <img src="Adidas/adidasadistarxlg3.png" alt="adidasadistarxlg3" class="thumb" onclick="changeImage(this)">
+                <img src="Adidas/adidasadistarxlg4.png" alt="adidasadistarxlg4" class="thumb" onclick="changeImage(this)">
+                <img src="Adidas/adidasadistarxlg5.png" alt="adidasadistarxlg5" class="thumb" onclick="changeImage(this)">
+            </div>
+
+            <h4>Other Colors</h4>
+            <div class="other-colors">
+                <a href="adidasadistarxlg.html">
+                    <img src="Adidas/adidasadistarxlg1.png" alt="adidasadistarxlg1">
+                </a>
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="detail-info">
+            <h2>Adidas Adi Star XLG</h2>
+            <p>Price: RM <b>540</b></p>
+            <p>Description: The Adidas Adi Star XLG offers lightweight comfort and style, perfect for running, training, or casual everyday wear. Its breathable design and durable sole keep your feet supported all day.</p>
+             <br>
+        
+                <div class="size-header">
+                    <h3>Select Size</h3>
+                    <a href="mensizetable.html" class="size-guide">Size Guide</a>
+                </div>
+
+
+                <div class="size-selector">
+                    <button class="size-btn" onclick="selectSize(this)">7</button>
+                    <button class="size-btn" onclick="selectSize(this)">8</button>
+                    <button class="size-btn" onclick="selectSize(this)">9</button>
+                    <button class="size-btn" onclick="selectSize(this)">10</button>
+                    <button class="size-btn" onclick="selectSize(this)">11</button>
+                </div>
+
+                <button class="add-to-cart" onclick="proceedPayment()">Proceed to Payment</button>
+
+
+                <p id="selected-size" class="size-info"></p>
+
+            <a href="men.html" class="back-button">← Back to Men Shoes</a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    function changeImage(el){
+        document.getElementById('current-img').src = el.src;
+    }
+</script>
+
+<script>
+    let selectedSize = null;
+
+    function selectSize(button) {
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        button.classList.add('active');
+        selectedSize = button.innerText;
+
+        document.getElementById('selected-size').innerText =
+            "Selected Size: " + selectedSize;
+    }
+
+    function proceedPayment() {
+        if (!selectedSize) {
+            alert("Please select a size first.");
+            return;
+        }
+
+        // Redirect to proceed payment page
+        window.location.href = "proceedpayment.html";
+    }
+</script>
+
+
+</body>
+</html>
+</html>

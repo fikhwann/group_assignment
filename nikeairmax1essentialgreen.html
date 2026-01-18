@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nike Air Max 1 Essential Green | SneakZone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+<div class="logo">
+        <a href="index.html"><img src="logo/logo.jpg" alt="logo"></a>
+       </div>
+       <nav>
+        <a href="index.html">Home</a>
+        <a href="men.html" class="active">Men</a>
+        <a href="women.html">Women</a>
+        <a href="unisex.html">Unisex</a>
+        <a href="aboutus.html">About Us</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h1>Nike Air Max 1 Essential Green</h1>
+</section>
+
+<section class="product-detail">
+    <div class="detail-container">
+
+        <!-- Main Image -->
+        <div class="main-image">
+            <img id="current-img" src="Nike/airmax1essentialgreen5.png" alt="Nike Air Max 1 Essential Green">
+        </div>
+
+        <!-- Thumbnail Images -->
+        <div class="thumbnail-container">
+            <h4>More Images</h4>
+            <div class="thumbnails">
+                <img src="Nike/airmax1essentialgreen5.png" alt="Nike Air Max 1 Essential Green Side View" class="thumb" onclick="changeImage(this)">
+                <img src="Nike/airmax1essentialgreen1.png" alt="Nike Air Max 1 Essential Green Front View" class="thumb" onclick="changeImage(this)">
+                <img src="Nike/airmax1essentialgreen2.png" alt="Nike Air Max 1 Essential Green Top View" class="thumb" onclick="changeImage(this)">
+                <img src="Nike/airmax1essentialgreen3.png" alt="Nike Air Max 1 Essential Green Back View" class="thumb" onclick="changeImage(this)">
+                <img src="Nike/airmax1essentialgreen4.png" alt="Nike Air Max 1 Essential Green Sole View" class="thumb" onclick="changeImage(this)">
+            </div>
+
+            <h4>Colors</h4>
+            <div class="other-colors">
+                <a href="nikeairmax1essentialblack.html">
+                    <img src="Nike/airmax1essentialblack5.png" alt="Nike Air Max 1 Essential Black">
+                </a>
+                <a href="nikeairmax1essentialwhite.html">
+                    <img src="Nike/airmax1essentialwhite5.png" alt="Nike Air Max 1 Essential White">
+                </a>
+                <a href="nikeairmax1essentialgreen.html">
+                    <img src="Nike/airmax1essentialgreen5.png" alt="Nike Air Max 1 Essential Green">
+                </a>
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="detail-info">
+            <h2>Nike Air Max 1 Essential Black</h2>
+            <p>Price: RM <b>499</b></p>
+            <p>
+                Description: Nike Air Max 1 Essential Black delivers timeless design with visible Air cushioning,
+                offering all-day comfort and classic street style for everyday wear.
+            </p>
+            <br>
+        
+                <div class="size-header">
+                    <h3>Select Size</h3>
+                    <a href="mensizetable.html" class="size-guide">Size Guide</a>
+                </div>
+
+
+                <div class="size-selector">
+                    <button class="size-btn" onclick="selectSize(this)">7</button>
+                    <button class="size-btn" onclick="selectSize(this)">8</button>
+                    <button class="size-btn" onclick="selectSize(this)">9</button>
+                    <button class="size-btn" onclick="selectSize(this)">10</button>
+                    <button class="size-btn" onclick="selectSize(this)">11</button>
+                </div>
+
+                <button class="add-to-cart" onclick="proceedPayment()">Proceed to Payment</button>
+
+
+                <p id="selected-size" class="size-info"></p>
+
+            <a href="men.html" class="back-button">← Back to Men Shoes</a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    function changeImage(el){
+        document.getElementById('current-img').src = el.src;
+    }
+</script>
+
+<script>
+    let selectedSize = null;
+
+    function selectSize(button) {
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        button.classList.add('active');
+        selectedSize = button.innerText;
+
+        document.getElementById('selected-size').innerText =
+            "Selected Size: " + selectedSize;
+    }
+
+    function proceedPayment() {
+        if (!selectedSize) {
+            alert("Please select a size first.");
+            return;
+        }
+
+        // Redirect to proceed payment page
+        window.location.href = "proceedpayment.html";
+    }
+</script>
+
+
+</body>
+</html>
+</html>

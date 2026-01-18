@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adidas Falcon | SneakZone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html"><img src="logo/logo.jpg" alt="logo"></a>
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="men.html">Men</a>
+        <a href="women.html"class="active">Women</a>
+        <a href="unisex.html">Unisex</a>
+        <a href="aboutus.html">About Us</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h1>Adidas Falcon</h1>
+</section>
+
+<section class="product-detail">
+    <div class="detail-container">
+
+        <!-- Main Image -->
+        <div class="main-image">
+            <img id="current-img" src="Adidas/falcon_white1.png" alt="Adidas Falcon">
+        </div>
+
+        <!-- Thumbnail Images -->
+        <div class="thumbnail-container">
+            <h4>More Images</h4>
+            <div class="thumbnails">
+                <img src="Adidas/falcon_white1.png" alt="Adidas Falcon" class="thumb" onclick="changeImage(this)">
+                <img src="Adidas/falcon_white2.png" alt="Adidas Falcon" class="thumb" onclick="changeImage(this)">
+                <img src="Adidas/falcon_white3.png" alt="Adidas Falcon" class="thumb" onclick="changeImage(this)">
+                <img src="Adidas/falcon_white4.png" alt="Adidas Falcon" class="thumb" onclick="changeImage(this)">
+                <img src="Adidas/falcon_white5.png" alt="Adidas Falcon" class="thumb" onclick="changeImage(this)">
+            </div>
+
+            <h4>Other Colors</h4>
+            <div class="other-colors">
+                <a href="adidasfalcon.html">
+                    <img src="Adidas/falcon_white1.png" alt="Adidas Falcon">
+                </a>
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="detail-info">
+            <h2>Adidas Falcon</h2>
+            <p>Price: RM <b>499</b></p>
+            <p>Description: The Adidas Originals Falcon (and similar Women adidas Falcon, Women adidas Falcon 'Black White', etc.) is a chunky, ’90s-inspired lifestyle sneaker from adidas with a layered mesh and suede upper and a cushioned EVA midsole, blending retro running-shoe style with modern streetwear comfort.</p>
+            <br>
+        
+                <div class="size-header">
+                    <h3>Select Size</h3>
+                    <a href="sizetable.html" class="size-guide">Size Guide</a>
+                </div>
+
+
+                <div class="size-selector">
+                    <button class="size-btn" onclick="selectSize(this)">6</button>
+                    <button class="size-btn" onclick="selectSize(this)">7</button>
+                    <button class="size-btn" onclick="selectSize(this)">8</button>
+                    <button class="size-btn" onclick="selectSize(this)">9</button>
+                    <button class="size-btn" onclick="selectSize(this)">10</button>
+                </div>
+
+                <button class="add-to-cart" onclick="proceedPayment()">Proceed to Payment</button>
+
+
+                <p id="selected-size" class="size-info"></p>
+
+            <a href="women.html" class="back-button">← Back to Women Shoes</a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    function changeImage(el){
+        document.getElementById('current-img').src = el.src;
+    }
+</script>
+
+<script>
+    let selectedSize = null;
+
+    function selectSize(button) {
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        button.classList.add('active');
+        selectedSize = button.innerText;
+
+        document.getElementById('selected-size').innerText =
+            "Selected Size: " + selectedSize;
+    }
+
+    function proceedPayment() {
+        if (!selectedSize) {
+            alert("Please select a size first.");
+            return;
+        }
+
+        // Redirect to proceed payment page
+        window.location.href = "proceedpayment.html";
+    }
+</script>
+
+
+</body>
+</html>
+</html>

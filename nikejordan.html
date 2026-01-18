@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nike Jordan | SneakZone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+<div class="logo">
+        <a href="index.html"><img src="logo/logo.jpg" alt="logo"></a>
+       </div>
+       <nav>
+        <a href="index.html">Home</a>
+        <a href="men.html" class="active">Men</a>
+        <a href="women.html">Women</a>
+        <a href="unisex.html">Unisex</a>
+        <a href="aboutus.html">About Us</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h1>Nike Jordan</h1>
+</section>
+
+<section class="product-detail">
+    <div class="detail-container">
+
+        <!-- Main Image -->
+        <div class="main-image">
+            <img id="current-img" src="Nike/nikejordan1.png" alt="nikejordan1">
+        </div>
+
+        <!-- Thumbnail Images -->
+        <div class="thumbnail-container">
+            <h4>More Images</h4>
+            <div class="thumbnails">
+                <img src="Nike/nikejordan1.png" alt="nikejordan1" class="thumb" onclick="changeImage(this)">
+                <img src="Nike/nikejordan2.png" alt="nikejordan2" class="thumb" onclick="changeImage(this)">
+                <img src="Nike/nikejordan3.png" alt="nikejordan3" class="thumb" onclick="changeImage(this)">
+                <img src="Nike/nikejordan4.png" alt="nikejordan4" class="thumb" onclick="changeImage(this)">
+                <img src="Nike/nikejordan5.png" alt="nikejordan5" class="thumb" onclick="changeImage(this)">
+            </div>
+
+            <h4>Other Colors</h4>
+            <div class="other-colors">
+                <a href="nikejordan.html">
+                    <img src="Nike/nikejordan1.png" alt="nikejordan1">
+                </a>
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="detail-info">
+            <h2>Nike Jordan</h2>
+            <p>Price: RM <b>449</b></p>
+            <p>Description: The Nike Jordan is designed for comfort and style. Perfect for running, gym, or casual wear.</p>
+            <br>
+        
+                <div class="size-header">
+                    <h3>Select Size</h3>
+                    <a href="mensizetable.html" class="size-guide">Size Guide</a>
+                </div>
+
+
+                <div class="size-selector">
+                    <button class="size-btn" onclick="selectSize(this)">7</button>
+                    <button class="size-btn" onclick="selectSize(this)">8</button>
+                    <button class="size-btn" onclick="selectSize(this)">9</button>
+                    <button class="size-btn" onclick="selectSize(this)">10</button>
+                    <button class="size-btn" onclick="selectSize(this)">11</button>
+                </div>
+
+                <button class="add-to-cart" onclick="proceedPayment()">Proceed to Payment</button>
+
+
+                <p id="selected-size" class="size-info"></p>
+
+            <a href="men.html" class="back-button">← Back to Men Shoes</a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    function changeImage(el){
+        document.getElementById('current-img').src = el.src;
+    }
+</script>
+
+<script>
+    let selectedSize = null;
+
+    function selectSize(button) {
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        button.classList.add('active');
+        selectedSize = button.innerText;
+
+        document.getElementById('selected-size').innerText =
+            "Selected Size: " + selectedSize;
+    }
+
+    function proceedPayment() {
+        if (!selectedSize) {
+            alert("Please select a size first.");
+            return;
+        }
+
+        // Redirect to proceed payment page
+        window.location.href = "proceedpayment.html";
+    }
+</script>
+
+
+</body>
+</html>
+

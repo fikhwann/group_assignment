@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Men Shoes | SneakZone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+<div class="logo">
+        <a href="index.html"><img src="logo/logo.jpg" alt="logo"></a>
+       </div>
+       <nav>
+        <a href="index.html">Home</a>
+        <a href="men.html" class="active">Men</a>
+        <a href="women.html">Women</a>
+        <a href="unisex.html">Unisex</a>
+        <a href="aboutus.html">About Us</a>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h1 align="center">Men Shoes</h1>
+</section>
+
+<section class="shop-container">
+
+    <!-- ===== FILTER ===== -->
+    <aside class="filter">
+        <h3>Filter by Brand</h3>
+
+        <label>
+            <input type="checkbox" class="brand-filter" value="nike">
+            Nike
+        </label>
+
+        <label>
+            <input type="checkbox" class="brand-filter" value="adidas">
+            Adidas
+        </label>
+
+        <label>
+            <input type="checkbox" class="brand-filter" value="puma">
+            Puma
+        </label>
+
+        <button class="back-button" onclick="clearFilter()">Clear Filter</button>
+    </aside>
+
+    <!-- ===== PRODUCTS ===== -->
+    <div class="products">
+        <h2>All Men Shoes</h2>
+
+        <div class="product-grid">
+
+            <!-- ===== PRODUCT CARD TEMPLATE ===== -->
+            <!-- NIKE -->
+ <a href="nikeairmax1essentialblack.html" class="product-card" data-brand="nike">
+                <img src="Nike/airmax1essentialblack5.png" alt="Nike Air Max Essential">
+                <h3>Nike Air Max Essential</h3>
+                <p>RM 599</p>
+            </a>
+
+            <a href="nikeairforce1pink.html" class="product-card" data-brand="nike">
+                <img src="Nike/airforce1pink1.png" alt="Nike Air Force 1 Pink">
+                <h3>Nike Air Force</h3>
+                <p>RM 399</p>
+            </a>
+
+            <a href="adidassl.html" class="product-card" data-brand="adidas">
+                <img src="Adidas/adidassl1.png" alt="Adidas SL 72">
+                <h3>Adidas SL 72</h3>
+                <p>RM 699</p>
+            </a>
+
+            <a href="pumapalermoblack.html" class="product-card" data-brand="puma">
+                <img src="Puma/palermoblack2.png" alt="Puma Palermo Black">
+                <h3>Puma Palermo</h3>
+                <p>RM 499</p>
+            </a>
+
+            <!-- Row 2 -->
+            <a href="pumaarizoraretro.html" class="product-card" data-brand="puma">
+                <img src="Puma/arizoraretro2.png" alt="Puma Arizora Retro">
+                <h3>Puma Arizora Retro</h3>
+                <p>RM 499</p>
+            </a>
+
+            <a href="adidasadistarxlg.html" class="product-card" data-brand="adidas">
+                <img src="Adidas/adidasadistarxlg1.png" alt="Adidas Adistar XLG">
+                <h3>Adidas Adistar XLG</h3>
+                <p>RM 699</p>
+            </a>
+
+            <a href="pumacaproclassic.html" class="product-card" data-brand="puma">
+                <img src="Puma/caproclassic2.png" alt="Puma Capro Classic">
+                <h3>Puma Capro Classic</h3>
+                <p>RM 499</p>
+            </a>
+
+            <a href="nikep6000.html" class="product-card" data-brand="nike">
+                <img src="Nike/nikep60001.png" alt="Nike P 6000">
+                <h3>Nike P 6000</h3>
+                <p>RM 599</p>
+            </a>
+
+            <!-- Row 3 -->
+            <a href="adidascampus001.html" class="product-card" data-brand="adidas">
+                <img src="Adidas/adidascampus001.png" alt="Adidas Campus 00s">
+                <h3>Adidas Campus 00s</h3>
+                <p>RM 699</p>
+            </a>
+
+            <a href="nikepacific.html" class="product-card" data-brand="nike">
+                <img src="Nike/pacific1.png" alt="Nike Pacific">
+                <h3>Nike Pacific</h3>
+                <p>RM 599</p>
+            </a>
+
+            <a href="pumamajesty.html" class="product-card" data-brand="puma">
+                <img src="Puma/majesty2.png" alt="Puma Majesty">
+                <h3>Puma Majesty</h3>
+                <p>RM 499</p>
+            </a>
+
+            <a href="pumaxrickandmorty.html" class="product-card" data-brand="puma">
+                <img src="Puma/pumaxrickandmorty2.png" alt="Puma x Rick and Morty">
+                <h3>Puma x Rick and Morty</h3>
+                <p>RM 499</p>
+            </a>
+
+            <!-- Row 4 -->
+            <a href="nikeshoxtl.html" class="product-card" data-brand="nike">
+                <img src="Nike/nikeshoxtl1.png" alt="Nike Shox TL">
+                <h3>Nike Shox TL</h3>
+                <p>RM 599</p>
+            </a>
+
+            <a href="nikegato.html" class="product-card" data-brand="nike">
+                <img src="Nike/nikegato1.png" alt="Nike Gato">
+                <h3>Nike Gato</h3>
+                <p>RM 399</p>
+            </a>
+
+            <a href="adidasitalia60s.html" class="product-card" data-brand="adidas">
+                <img src="Adidas/adidasitalia60s1.png" alt="Adidas Italia 60s">
+                <h3>Adidas Italia 60s</h3>
+                <p>RM 699</p>
+            </a>
+
+            <a href="pumaspeedcatplus.html" class="product-card" data-brand="puma">
+                <img src="Puma/speedcatplusred2.png" alt="Puma Speedcat Plus Red">
+                <h3>Puma Speedcat Plus</h3>
+                <p>RM 499</p>
+            </a>
+
+            <!-- Row 5 -->
+            <a href="nikezoom.html" class="product-card" data-brand="nike">
+                <img src="Nike/nikezoom1.png" alt="Nike Zoom">
+                <h3>Nike Zoom</h3>
+                <p>RM 599</p>
+            </a>
+
+            <a href="nikejordan.html" class="product-card" data-brand="nike">
+                <img src="Nike/nikejordan1.png" alt="Nike Jordan">
+                <h3>Nike Jordan</h3>
+                <p>RM 399</p>
+            </a>
+
+            <a href="adidastokyo.html" class="product-card" data-brand="adidas">
+                <img src="Adidas/adidastokyo1.png" alt="Adidas Tokyo">
+                <h3>Adidas Tokyo</h3>
+                <p>RM 699</p>
+            </a>
+
+            <a href="pumaspeedcatpremium.html" class="product-card" data-brand="puma">
+                <img src="Puma/speedcatpremium2.png" alt="Puma Speedcat Premium">
+                <h3>Puma Speedcat Premium</h3>
+                <p>RM 499</p>
+            </a>
+
+            <!-- Row 6 -->
+            <a href="adidasjapan.html" class="product-card" data-brand="adidas">
+                <img src="Adidas/adidasjapan1.png" alt="Adidas Japan">
+                <h3>Adidas Japan</h3>
+                <p>RM 699</p>
+            </a>
+
+            <a href="pumaxsonic.html" class="product-card" data-brand="puma">
+                <img src="Puma/pumaxsonic1.png" alt="Puma x Sonic">
+                <h3>Puma x Sonic</h3>
+                <p>RM 499</p>
+            </a>
+            <a href="adidasstanblack.html" class="product-card" data-brand="adidas">
+                <img src="Adidas/adidasstanblack1.png" alt="Adidas Stan Smith Black">
+                <h3>Adidas Stan Black</h3>
+                <p>RM 699</p>
+            </a>
+
+            <a href="pumaxsg.html" class="product-card" data-brand="puma">
+                <img src="Puma/pumaxsg1.png" alt="Puma x SG">
+                <h3>Puma x SG</h3>
+                <p>RM 499</p>
+            </a>
+            <a href="nikedunk.html" class="product-card" data-brand="nike">
+                <img src="Nike/nikedunk1.png" alt="Puma x SG">
+                <h3>Nike Dunk 1</h3>
+                <p>RM 499</p>
+            </a>
+            <!-- 🔁 KEEP ALL YOUR OTHER SHOES SAME STRUCTURE -->
+            <!-- JUST ADD brand-tag + overlay (names unchanged) -->
+
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 SneakZone</p>
+</footer>
+
+<!-- ===== FILTER SCRIPT ===== -->
+<script>
+const checkboxes = document.querySelectorAll('.brand-filter');
+const products = document.querySelectorAll('.product-card');
+
+checkboxes.forEach(box => {
+    box.addEventListener('change', filterProducts);
+});
+
+function filterProducts() {
+    const selectedBrands = Array.from(checkboxes)
+        .filter(cb => cb.checked)
+        .map(cb => cb.value);
+
+    products.forEach(product => {
+        const brand = product.dataset.brand;
+
+        if (selectedBrands.length === 0 || selectedBrands.includes(brand)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+
+function clearFilter() {
+    checkboxes.forEach(cb => cb.checked = false);
+    filterProducts();
+}
+</script>
+
+</body>
+</html>
